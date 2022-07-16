@@ -4,7 +4,9 @@ Servo servoY;
 Servo servoP1;
 Servo servoP2;
 
-int Home = 0; 
+const int Home = 0;
+const int Lpos = 270; 
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -20,5 +22,13 @@ void loop() {
   servoY.write(Home);
   servoP1.write(Home);
   servoP2.write(Home);
+
+   for (int pos = 0; <= Lpos; pos += 1);
+   {
+    servoY.write(pos);
+   }
+  
+
+  
 
 }
