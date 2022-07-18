@@ -6,7 +6,7 @@ Servo servoP2;
 
 const int Home = 0;
 const int Lpos = 270; 
-
+int pos = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -23,10 +23,14 @@ void loop() {
   servoP1.write(Home);
   servoP2.write(Home);
 
-   for (int pos = 0; <= Lpos; pos += 1);
+   for (int pos = 0;pos <= 270; pos += 1)
    {
     servoY.write(pos);
+    delay (15);
    }
+
+   servoY.write(Home);
+   delay(30);
   
 
   
